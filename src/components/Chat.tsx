@@ -15,6 +15,8 @@ const fuseOptions = {
 	]
 }
 
+const wait_time = 1500
+
 const fuse = new Fuse(data, fuseOptions);
 
 enum Position {
@@ -34,7 +36,7 @@ export default function Chat() {
     const [questions_visible, toggleQuestions] = useState(true)
     const [conversations, setConverstations] = useState<IConverstions>([])
     const [is_loading, setLoading] = useState(false)
-    const [result_count, setResultCount] = useState(5)
+    const [result_count, setResultCount] = useState(6)
 
     useEffect(() => {
         let timer:any = null;
@@ -42,7 +44,7 @@ export default function Chat() {
           timer = setInterval(() => {
             setLoading(false)
             replyMessage(chatbox_text)
-          }, 1000);
+          }, wait_time);
         }
         return () => {
           clearInterval(timer);
