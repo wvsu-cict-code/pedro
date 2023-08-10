@@ -15,9 +15,9 @@ export default function ChatBubble({ position, message }: IProps) {
         <div>
             <div className={`${position ? 'text-right' : 'text-left'} my-2`}>
                 {
-                    message ? <div className={`w-fit rounded-lg text-white p-4 ${position ? 'bg-green-600 mr-0 ml-auto' : 'bg-gray-800'} capitalize`}>
+                    message ? <div className={`w-fit rounded-lg text-gray-500 p-4 ${position ? 'bg-green-100 mr-0 ml-auto' : 'bg-gray-100'} capitalize`}>
                         {message}
-                    </div> : <div className={`w-fit rounded-lg text-white p-4 bg-orange-400 capitalize`}>
+                    </div> : <div className={`w-fit rounded-lg text-gray-500 p-4 bg-orange-400 capitalize`}>
                         {message ? message : 'Error retrieving message.'}
                     </div>
                 }

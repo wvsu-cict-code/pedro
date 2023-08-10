@@ -107,7 +107,7 @@ export default function Chat() {
                     <div className="md:col-span-5">
                         <textarea  value={chatbox_text} onChange={({ target }) => {
                             setChatBoxText(target.value)
-                        }} className="my-2 p-4 rounded w-full text-gray-600" placeholder="Can't find what you are looking for? Type your question here." /></div>
+                        }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder="Can't find what you are looking for? Type your question here." /></div>
                     <button onClick={()=>sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
                 </div>
             </div>
