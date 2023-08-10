@@ -1,20 +1,26 @@
+import type { ReactElement } from "react"
+
 enum Position {
     Left = 0,
     Right = 1
 }
 
-interface Props {
+interface IProps {
     position: Position
-    message?: String
+    message?: ReactElement
 }
 
-export default function ChatBubble({ position, message }: Props) {
+export default function ChatBubble({ position, message }: IProps) {
     return (
         <div>
-            <p className={`${position ? 'text-right' : 'text-left'} my-2`}>
-                <div className={`w-fit rounded-lg text-white p-4 ${position ? 'bg-green-600 mr-0 ml-auto' : 'bg-gray-800'}`}>
-                    {message?message:'Error retrieving message.'}
-                </div>
+            <div className={`${position ? 'text-right' : 'text-left'} my-2`}>
+                {
+                    message ? <div className={`w-fit rounded-lg text-white p-4 ${position ? 'bg-green-600 mr-0 ml-auto' : 'bg-gray-800'}`}>
+                        {message}
+                    </div> : <div className={`w-fit rounded-lg text-white p-4 bg-orange-400`}>
+                        {message ? message : 'Error retrieving message.'}
+                    </div>
+                }
                 {position ?
                     <div className="text-sm opacity-50 mt-2">
                         Anonymous
@@ -27,7 +33,7 @@ export default function ChatBubble({ position, message }: Props) {
                             Pedro
                         </div>
                     </div> : null}
-            </p>
+            </div>
         </div>
     )
 }

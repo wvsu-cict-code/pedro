@@ -2,21 +2,25 @@
     {
         "id": "",
         "tags": ["process"],
-        "body": "What is the first step in the rehabilitation process?"
+        "body": "What is the first step in the rehabilitation process?",
+        "response":"The patient first undergoes ASSIST and then gets a drug test."
     },
     {
         "id": "",
         "tags": ["assistance"],
-        "body": "What is the ASSIST tool about?"
+        "body": "What is the ASSIST tool about?",
+        "response":"It is a screening tool to assess an individual's substance use and identify potential risks or problems."
     },
     {
         "id": "",
         "tags": ["duration"],
-        "body": "How long does the rehabilitation process typically last?"
+        "body": "How long does the rehabilitation process typically last?",
+        "response":"It depends on the severity of drug use if he or she is a low-risk, moderate, mild, high-risk, or severe user."
     },
     {
         "id": "",
         "tags": ["low risks"],
-        "body": "What is a low-risk user? What if I'm a low-risk user?"
+        "body": "What is a low-risk user? What if I'm a low-risk user?",
+        "response":"A low-risk user of drugs refers to an individual who engages in substance use in a manner that poses minimal harm or negative consequences to their overall health and well-being. If diagnosed after the screening, one must undergo General Intervention. "
     }
 ]
