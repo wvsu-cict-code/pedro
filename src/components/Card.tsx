@@ -13,7 +13,7 @@ export default function Card({ tags, body, onClick }: Props) {
                 <h2 className="m-0 text-sm capitalize opacity-80">
                     {tags}
                 </h2>
-                <p className="mt-2 mb-0">
+                <p className="mt-2 mb-0 capitalize">
                     {body}
                 </p>
             </div>
