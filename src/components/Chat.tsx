@@ -4,7 +4,10 @@ import { FaExclamationCircle, FaPaperPlane } from "react-icons/fa";
 import { animateScroll as scroll } from 'react-scroll';
 import { TypeAnimation } from "react-type-animation"
 import { v4 as uuidv4 } from 'uuid';
+import shuffle from 'fisher-yates';
 import data from '../data/questions.json';
+import intro_data from '../data/intro.json'
+import extro_data from '../data/extro.json'
 import BouncingLoader from "./BouncingLoader";
 import Card from "./Card";
 import ChatBubble from "./ChatBubble";
@@ -39,7 +42,7 @@ export default function Chat() {
     const [chatbox_text, setChatBoxText] = useState("")
     const [questions_visible, toggleQuestions] = useState(true)
     const [conversations, setConverstations] = useState<IConverstions>([
-        { id:uuidv4(), position: Position.Left, message: <span>Hello, I'm Pedro! How can I assist you?</span> }
+        { id:uuidv4(), position: Position.Left, message: <span>{shuffle(intro_data)[0].body}</span> }
     ])
     const [is_loading, setLoading] = useState(false)
     const [result_count, setResultCount] = useState(6)
@@ -81,7 +84,7 @@ export default function Chat() {
             console.log({ result })
             console.log({ score })
 
-            setConverstations(conversations => [...conversations, { id: result[0].item.id,position: Position.Left, message: <span><TypeAnimation speed={90} cursor={false} sequence={[result[0].item.response]} /></span> }])
+            setConverstations(conversations => [...conversations, { id: result[0].item.id,position: Position.Left, message: <span><TypeAnimation style={{whiteSpace: 'pre-line'}} speed={80} cursor={false} sequence={[result[0].item.response +'\n\n'+ shuffle(extro_data)[0].body]} /></span> }])
         } else {
             setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
         }
