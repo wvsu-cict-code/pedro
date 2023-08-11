@@ -1,18 +1,21 @@
-import { FaPaperPlane, FaExclamationCircle } from "react-icons/fa";
-import data from '../data/questions.json'
-import Card from "./Card";
-import { ReactElement, useEffect, useState } from 'react'
-import ChatBubble from "./ChatBubble";
-import Fuse from 'fuse.js'
+import Fuse from 'fuse.js';
+import { Key, ReactElement, useEffect, useState } from 'react';
+import { FaExclamationCircle, FaPaperPlane } from "react-icons/fa";
+import { animateScroll as scroll } from 'react-scroll';
+import { TypeAnimation } from "react-type-animation"
 import { v4 as uuidv4 } from 'uuid';
+import data from '../data/questions.json';
 import BouncingLoader from "./BouncingLoader";
+import Card from "./Card";
+import ChatBubble from "./ChatBubble";
+
 
 const fuseOptions = {
     includeScore: true,
     keys: [
-		"tags",
-		"body"
-	]
+        "tags",
+        "body"
+    ]
 }
 
 const wait_time = 1500
@@ -26,58 +29,61 @@ enum Position {
 interface IConversation {
     position: Position
     message: ReactElement
+    id:Key
 }
 
-interface IConverstions extends Array<IConversation>{}
+interface IConverstions extends Array<IConversation> { }
 
 export default function Chat() {
-    
+
     const [chatbox_text, setChatBoxText] = useState("")
     const [questions_visible, toggleQuestions] = useState(true)
-    const [conversations, setConverstations] = useState<IConverstions>([])
+    const [conversations, setConverstations] = useState<IConverstions>([
+        { id:uuidv4(), position: Position.Left, message: <span>Hello, I'm Pedro! How can I assist you?</span> }
+    ])
     const [is_loading, setLoading] = useState(false)
     const [result_count, setResultCount] = useState(6)
 
     useEffect(() => {
-        let timer:any = null;
-        if(is_loading){
-          timer = setInterval(() => {
-            setLoading(false)
-            replyMessage(chatbox_text)
-          }, wait_time);
+        let timer: any = null;
+        if (is_loading) {
+            timer = setInterval(() => {
+                setLoading(false)
+                replyMessage(chatbox_text)
+            }, wait_time);
         }
         return () => {
-          clearInterval(timer);
+            clearInterval(timer);
         };
-      });
+    });
 
-    function sendMessage(query:string){
+    function sendMessage(query: string) {
+        scroll.scrollToBottom()
         setLoading(true)
         toggleQuestions(false)
         setChatBoxText(query)
-         // query
-         setConverstations(conversations => [...conversations, {position:Position.Right, message: <span>{query}</span>}])
+        // query
+        setConverstations(conversations => [...conversations, { position: Position.Right, message: <span>{query}</span>, id:uuidv4() }])
     }
 
-    function replyMessage(query:string){
-        
+    function replyMessage(query: string) {
+
         const result = fuse.search(query)
-        const not_found_message: ReactElement = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> I found no matches with your query. You can check our </span><a className="underline" href="#" onClick={e=>{
+        const not_found_message: ReactElement = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> I found no matches with your query. You can check our </span><a className="underline" href="#" onClick={e => {
             e.preventDefault()
-            scroll({top:0})
             setResultCount(data.length)
             toggleQuestions(true)
         }}>FAQ list</a>.</span>
-        
+
         if (result.length > 0) {
             // A score of 0 is perfect match
-            const score = result[0].score?result[0].score:1
-            console.log({result})
-            console.log({score})
-            
-            setConverstations(conversations => [...conversations, {position:Position.Left, message: <span>{result[0].item.response}</span>}])       
-        }else{
-            setConverstations(conversations => [...conversations, {position:Position.Left, message: not_found_message}])
+            const score = result[0].score ? result[0].score : 1
+            console.log({ result })
+            console.log({ score })
+
+            setConverstations(conversations => [...conversations, { id: result[0].item.id,position: Position.Left, message: <span><TypeAnimation speed={90} cursor={false} sequence={[result[0].item.response]} /></span> }])
+        } else {
+            setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
         }
     }
 
@@ -94,21 +100,22 @@ export default function Chat() {
             </ul>}
             <div className="mt-4 grid grid-cols-1 gap-4">
                 {conversations.map(i => (
-                    <ChatBubble 
-                    key={uuidv4()}
-                    position={i.position}
-                    message={i.message.props.children}
+                    <ChatBubble
+                        key={i.id}
+                        id={uuidv4()}
+                        position={i.position}
+                        message={i.message.props.children}
                     />
                 ))}
-                {is_loading && <ChatBubble key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
+                {is_loading && <ChatBubble id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
             </div>
             <div className="mt-6">
                 <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
                     <div className="md:col-span-5">
-                        <textarea  value={chatbox_text} onChange={({ target }) => {
+                        <textarea value={chatbox_text} onChange={({ target }) => {
                             setChatBoxText(target.value)
                         }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder="Can't find what you are looking for? Type your question here." /></div>
-                    <button onClick={()=>sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
+                    <button onClick={() => sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
                 </div>
             </div>
         </div>
