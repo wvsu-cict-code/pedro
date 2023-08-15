@@ -5,9 +5,9 @@ import { animateScroll as scroll } from 'react-scroll';
 import { TypeAnimation } from "react-type-animation"
 import { v4 as uuidv4 } from 'uuid';
 import shuffle from 'fisher-yates';
-import data from '../data/questions.json';
-import intro_data from '../data/intro.json'
-import extro_data from '../data/extro.json'
+import data from '../data/en/questions.json';
+import intro_data from '../data/en/intro.json'
+import extro_data from '../data/en/extro.json'
 import BouncingLoader from "./BouncingLoader";
 import Card from "./Card";
 import ChatBubble from "./ChatBubble";
