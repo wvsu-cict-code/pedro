@@ -1,0 +1,170 @@
+[
+    {
+      "id": "_1",
+      "tags": [],
+      "body": "Ano ang una himuon kung gusto magpa-rehab? ",
+      "response": "Ang pasyente kinanglan magpa-screening kag drug test."
+    },
+    {
+      "id": "_2",
+      "tags": [],
+      "body": "Ano ang ASSIST? Ano ang gakatabo kung ga-screening? ",
+      "response": "Ang screening isa ka pamaagi para mabal-an kung ano ang lebel sang paggamit sang droga sang isa ka indibidwal kag ang pagkilala sang possible nga mga solusyon kag programa nga may kaangtanan sini."
+    },
+    {
+      "id": "_3",
+      "tags": [],
+      "body": "Ano ka dugay magpa-rehab?",
+      "response": "Nagadepende ini sa kung ano kalala ang paggamit sang droga. Kon siya kis-a lang gagamit ukon pirme guid,  basehan ini kung ano nga interbensyon o programa nga pagahimuon."
+    },
+    {
+      "id": "_4",
+      "tags": [],
+      "body": "Ano ang isa ka low-risk user? Paano kung kis-a lang ako gagamit sang droga? Paano kung isa ako ka low-risk user? ",
+      "response": "Kung ikaw kis-a lang gagamit ukon ‘isang low-risk user’, buot silingon gamay lang ang negatibo nga epekto sin isa imo maayong panglawas. Kung ikaw isa ka low-risk user, kinanglan mo sang ‘screening’ o eksaminasyon, kag kinanlan magpaidlalim sa General Intervention. "
+    },
+    {
+      "id": "_5",
+      "tags": [],
+      "body": "Ma-preso ako bala kung kis-a lang ko gagamit droga? Ma-preso ako bala kung madakpan ko gagamit sg droga? ",
+      "response": "Indi. Kon nadiskubrehan nga ikaw gagamit sg droga ka sa unang pagkakataon kinanlan lang makaattend sg General Intervention, maliban na lamang kung may ginlapas ka ang krimen nga natabo tungod sa impluwensya sang droga, ukon ginakasuhan ka tungod sa ikaduha nga paggamit sang droga."
+    },
+    {
+      "id": "_6",
+      "tags": [],
+      "body": "Ano ang buot-silingon sang moderate risk ukon mild user sg droga?",
+      "response": "Ang isa ka moderate user sg droga amo ang gagamit sg droga nga ara sa tunga sg isa ka low risk kag isa ka high risk na user. Kung ikaw isa nga moderate user, kinahanglan mo magpaidalum sa Community-Based Drug Rehabilitation Program (CBDRP). Ang moderate risk amo ang resulta sang eksaminasyon (gamit ang ASSIST tool) samtang ang mild use ukon mild dependency amo ang resulta sang eksaminasyon para sa High Risk nga mga gagamit sang droga. Ang duha ka klase nga users kinanlan magpaidalum sa CBDRP. "
+    },
+    {
+      "id": "_7",
+      "tags": [],
+      "body": "Mapreso ako bala kung isa ako ka moderate user? ",
+      "response": "Kon nadiskubrehan nga ikaw gagamit sg droga ka sa unang pagkakataon kinanlan lang makaattend sg General Intervention, maliban na lamang kung may ginlapas ka ang krimen nga natabo tungod sa impluwensya sang droga, ukon ginakasuhan ka tungod sa ikaduha nga paggamit sang droga."
+    },
+    {
+      "id": "_8",
+      "tags": [],
+      "body": "Ano ang isa ka high-risk user? ",
+      "response": "Ang isa ka high-risk user amo ang gagamit sang droga kung sa diin daku ang peligro sa panglawas kag kaayuhan. "
+    },
+    {
+      "id": "_9",
+      "tags": [],
+      "body": "Paano kung isa ako ka high-risk user? ",
+      "response": "Ang high-risk nga user sg droga mahimo ma-classify sa isa ka mild, moderate o severe na paggamit sg droga, base sa resulta sg Drug Dependency Examination (DDE). Ang mild user magapaidalum sa Community-Based Drug Rehab Program (CBDRP). And moderate nga user mahimo pagtuytuyan sa isa ka outpatient program, samtang ang isa ka gumagamit nga tuman ka high risk mahimo magrekomendar nga magtambong sa Treatment and Rehabilitation Center (TRC). "
+    },
+    {
+      "id": "_10",
+      "tags": [],
+      "body": "Ano ang matabo kung ako mapa-drug test?",
+      "response": "Para sa purpose sang intervention program, ginarekomenda ang pasyente nga magpaidalum sa Community Based Drug Rehabilitation Program (CBDRP) kag magpa-drug test nga pagahimuon sg tatlo ka beses samtang nakapaidalum sa intervention program. "
+    },
+    {
+      "id": "_11",
+      "tags": [],
+      "body": "Ngaa kinanlan nga tatlo guid ka beses mapa-drug test? ",
+      "response": "Ang drug tests pagahimoon sa simula sg pagsulod sang kliyente sa programa, kag bisan sa ano nga tion sa sulod sang period sang pagtuman sa programa, kag sa katapusan, antes sang temporary release/kompletong pagtapos sang primary program."
+    },
+    {
+      "id": "_12",
+      "tags": [],
+      "body": "Ano ang General Intervention? ",
+      "response": "Ang General Intervention sa rehabilitasyon kontra droga gahatag sang mga nagalain-lain nga solusyon kag aksyon agod agud nga ang mga indibidwal nga kaagi gamit sang droga mabuligan sa pagbalik sa normal nga kinabuhi. Ang mga interbensyon nagatuyo sa paghatag sang suporta, pagpromotar sang positibo nga pagbag-o, kag paglikaw sa dugang nga epekto sang droga. "
+    },
+    {
+      "id": "_13",
+      "tags": [],
+      "body": "Ano ang mga aktibidad sa idalom sang General Intervention? Ano ang nagakatabo sa sulod sang isa ka General Intervention?",
+      "response": "Ang General Intervention magalakip sang assessment kag evaluation, pagkonsulta, pagtudlo sang mga paagi sa paglikaw kag impormasyon, mga group support kag peer support, kag health plans kaupod ang suporta sang pamilya. "
+    },
+    {
+      "id": "_14",
+      "tags": [],
+      "body": "May ara bala mga lain-lain nga klase sang mga programa sa rehabilitasyon nga pwede matigayon saakon?",
+      "response": "May ara mga klase sang mga programa sa rehabilitasyon: Amo ini ang General Intervention (GI), Community Based Drug Rehabilitation Program (CBDRP), kag ang Treatment and Rehabilitation Center (TRC), kag Balay Silangan Program."
+    },
+    {
+      "id": "_15",
+      "tags": [],
+      "body": "Paano ko makita sang isa ka rehab center malapit sa akon?",
+      "response": "Pwede ka mamangkot sa imo lokal nga City or Municipal Health Office / Center (kadalas sa city o municipal hall) ukon sa lokal nga Police Station kag Voluntary Help desk sang imo barangay."
+    },
+    {
+      "id": "_16",
+      "tags": [],
+      "body": "Ano ang pwede nga rehab center o program para saakon?",
+      "response": "Ang mga serbisyo nga kinahanglan antes ang pagpa-rehab amo ang screening, brief intervention, or referral. "
+    },
+    {
+      "id": "_17",
+      "tags": [],
+      "body": "Ano ang mga gasto o galastusan kaangot sa mga programa sa rehab?",
+      "response": "Wala sing bayad luwas kon ma-refer sa pribado nga pasilidad ukon institusyon."
+    },
+    {
+      "id": "_18",
+      "tags": [],
+      "body": "May ara bala nga government-funded o barato nga rehab center?  ",
+      "response": "Ang aton gobyerno may mga ginatigayon para sa aton PWUDs: amo ini ang General Intervention, (GI), Community-based Drug Rehab Program (CBDRP), kag Balay Silangan Reformation Program. Sa mga kaso naman sang high-risk users or severe users, magadepende in isa pinansiyal nga kasarang sg pasyente (indigent) ukon base sa rekomendasyon sg isa social worker."
+    },
+    {
+      "id": "_19",
+      "tags": [],
+      "body": "May yara bala nga mga grupo nga gasuporta ukon mga support groups nga makabulig saakon nga available?",
+      "response": "Huo, may mga programa nga ara gikan sa DSWD, Narcotics Anonymous, kag TESDA, ukon iban pa nga mga pribado nga grupo nga may adbokasiya kontra droga."
+    },
+    {
+      "id": "_20",
+      "tags": [],
+      "body": "Ano ang mga matabo o benepisyo kung ma-surrender ako o mapa-rehab / Gusto ko mag-surrender",
+      "response": "Ang boluntaryo nga pagsuko ukon pag-surrender may madamo nga mga benepisyo, isa na ang pagkakuha sg access sa maayon nga programa o mga rehab treatments, mas suportado nga tawo nga makabulig sa imo pag-bag-o, kag mas maayo nga ikaayong lawas. "
+    },
+    {
+      "id": "_21",
+      "tags": [],
+      "body": "Paano ko makabulig bulig o mapangitaan bulig ang akon kilala o pamilya o paryente nga nagdroga o kaagi gamit sg droga / Paano ko mabuligan ang akon kilala o pamilya o paryente nga nagdroga o kaagi gamit sg droga? ",
+      "response": "Ipaidalum siya sa screening, pakuhaa sing drug test, kag dayun magbisita sa inyo lokal nga city ukon munisipal nga health center para sa nagakaayon nga bulig. "
+    },
+    {
+      "id": "_22",
+      "tags": [],
+      "body": "May mga alternatibo ukon holistikong paagi bala sa rehabilitasyon sa paggamit sang droga?",
+      "response": "Maumpisa anay sa screening antis mabal-an kung may yara nga alternatibo nga aksyon sa iya pagparehab. Kinanlan hulaton bag-o magrekomendar ang sa screening facility nga pasudlon siya sa isa ka pribado nga pasilidad. "
+    },
+    {
+      "id": "_23",
+      "tags": [],
+      "body": "Gusto ko mag-surrender / Masiguro ko bala ang akon seguridad kon ako mag-surrender? ",
+      "response": "Huo, ginapasaligan ang seguridad sa imo pagsurender. Ang pagsurrender magahatag sang oportunidad nga makakuha sang angay nga interbensyon, pagbulong, kag suporta agod malikawan ang ila mga problema nga may kaangtanan sa droga. Mangin tikang man ini pakadto sa pag-ayo kag rehabilitasyon. Ang pagsurrender mahimo man nga makahatag sg legal na proteksiyon kag pagbulig halin sa mga otoridad nga naka-assign maghatag suporta sa mga tawo nga kaagi gamit sg iligal na droga. "
+    },
+    {
+      "id": "_24",
+      "tags": [],
+      "body": "Makasaligan ko bala ang mga tawo nga maassist sa akon sa tion sang akon pagsurrender kag samtang ara sa proseso sang screening?",
+      "response": "Oo. May yara kita health care professionals nga makasiguro sang imo privacy. Ang imo impormasyon kuhaon kung nagsugot ka. "
+    },
+    {
+      "id": "_25",
+      "tags": [],
+      "body": "Paano ko mabal-an kung ang isa ka drug rehabilitation center kilala kag may lisensya?",
+      "response": "Ang sentro kinahanglan nga akreditado sang DOH."
+    },
+    {
+      "id": "_26",
+      "tags": [],
+      "body": "May PNP ukon PDEA opisyal bala nga ara o magaabot sa akon screening?",
+      "response": "Wala sing personnel sang PNP ukon PDEA nga magaabot sa imo screening sa health center."
+    },
+    {
+      "id": "_27",
+      "tags": [],
+      "body": "Hello",
+      "response": "RANDOM"
+    },
+    {
+      "id": "_28",
+      "tags": [],
+      "body": "Sa diin pwede makareport sang drug personality / activity? ",
+      "response": "Agud magreport ang isa ka aktibidad ukon personalidad sa droga, magtawag lamang sa 'Isumbong Mo sa PDEA' sa +63 995 354 7020 ukon ikontak sang PDEA VI, tawagi ukon i-text ang +63 998-447-5633."
+    }
+   ]
