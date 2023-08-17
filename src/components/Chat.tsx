@@ -194,10 +194,9 @@ export default function Chat(props: any) {
             </div>
             <div className="mt-6">
                 <div className='mb-2'>
-                <a href="/" className="mx-2 text-3xl text-green-700 hover:text-green-300 bg-transparent inline-flex"><FaHome className="mx-auto pt-3" /></a>
                     {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                     {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
-                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
+                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}                  
                     
                 </div>
                 <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
@@ -206,7 +205,7 @@ export default function Chat(props: any) {
                             setChatBoxText(target.value)
                         }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder="Can't find what you are looking for? Type your question here." /></div>
                     <button onClick={() => sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
-                </div>
+                </div>                
             </div>
         </div>
 
