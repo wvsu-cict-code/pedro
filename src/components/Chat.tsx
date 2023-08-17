@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js';
 import { Key, ReactElement, useEffect, useState } from 'react';
-import { FaExclamationCircle, FaPaperPlane } from "react-icons/fa";
+import { FaExclamationCircle, FaPaperPlane, FaHome } from "react-icons/fa";
 import { animateScroll as scroll } from 'react-scroll';
 import { TypeAnimation } from "react-type-animation"
 import { v4 as uuidv4 } from 'uuid';
@@ -112,7 +112,7 @@ export default function Chat(props: any) {
             if (result_ta.length > 0) {
                 // A score of 0 is perfect match
                 const score = result_ta[0].score ? result_ta[0].score : 1
-                setConverstations(conversations => [...conversations, { id: result_en[0].item.id, position: Position.Left, message: <span><TypeAnimation style={{ whiteSpace: 'pre-line' }} speed={80} cursor={false} sequence={[(result_en[0].item.response == "RANDOM" ? shuffle(intro_ta_data)[0].body : result_ta[0].item.response) + '\n\n' + shuffle(extro_ta_data)[0].body]} /></span> }])
+                setConverstations(conversations => [...conversations, { id: result_ta[0].item.id, position: Position.Left, message: <span><TypeAnimation style={{ whiteSpace: 'pre-line' }} speed={80} cursor={false} sequence={[(result_ta[0].item.response == "RANDOM" ? shuffle(intro_ta_data)[0].body : result_ta[0].item.response) + '\n\n' + shuffle(extro_ta_data)[0].body]} /></span> }])
             } else {
                 setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
             }
@@ -122,7 +122,7 @@ export default function Chat(props: any) {
             if (result_hi.length > 0) {
                 // A score of 0 is perfect match
                 const score = result_hi[0].score ? result_hi[0].score : 1
-                setConverstations(conversations => [...conversations, { id: result_en[0].item.id, position: Position.Left, message: <span><TypeAnimation style={{ whiteSpace: 'pre-line' }} speed={80} cursor={false} sequence={[(result_hi[0].item.response == "RANDOM" ? shuffle(intro_hi_data)[0].body : result_hi[0].item.response) + '\n\n' + shuffle(extro_hi_data)[0].body]} /></span> }])
+                setConverstations(conversations => [...conversations, { id: result_hi[0].item.id, position: Position.Left, message: <span><TypeAnimation style={{ whiteSpace: 'pre-line' }} speed={80} cursor={false} sequence={[(result_hi[0].item.response == "RANDOM" ? shuffle(intro_hi_data)[0].body : result_hi[0].item.response) + '\n\n' + shuffle(extro_hi_data)[0].body]} /></span> }])
             } else {
                 setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
             }
@@ -194,10 +194,11 @@ export default function Chat(props: any) {
             </div>
             <div className="mt-6">
                 <div className='mb-2'>
-                    <span>Switch to:</span>
+                <a href="/" className="mx-2 text-3xl text-green-700 hover:text-green-300 bg-transparent inline-flex"><FaHome className="mx-auto pt-3" /></a>
                     {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                     {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
                     {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
+                    
                 </div>
                 <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
                     <div className="md:col-span-5">
