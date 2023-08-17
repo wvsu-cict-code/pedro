@@ -1,169 +1,169 @@
 [
     {
-      "id": "1",
-      "tags": "[]",
+      "id": "_ta_1",
+      "tags": [],
       "body": "Ano ang unang hakbang sa proseso ng rehabilitasyon? ",
       "response": "Ang pasyente ay sumasailalim sa screening bago sumailalim sa pagsusuri ng droga."
     },
     {
-      "id": "2",
-      "tags": "[]",
+      "id": "_ta_2",
+      "tags": [],
       "body": "Ano ang nangyayari sa screening/pagsusuri? ",
       "response": "Ang screening / pagsusuri o ASSIST tool ay isang paraan sa pagsusuri na ginagamit upang tukuyin ang paggamit ng droga ng isang indibidwal at matukoy ang posibleng mga panganib o problema na kaugnay dito."
     },
     {
-      "id": "3",
-      "tags": "[]",
+      "id": "_ta_3",
+      "tags": [],
       "body": "Gaano katagal karaniwang tumatagal ang proseso ng rehabilitasyon? ",
       "response": "Ito ay nakabatay sa kahalintulad ng paggamit ng droga ng isang indibidwal, kung mababa, katamtaman, banayad, mataas, o malalang tagagamit siya o siya. Ang haba ng rehabilitasyon ay nag-iiba depende sa uri ng interbensyon na isasagawa, na itatalaga batay sa pagkalala ng paggamit ng droga."
     },
     {
-      "id": "4",
-      "tags": "[]",
+      "id": "_ta_4",
+      "tags": [],
       "body": "Ano ang isang low-risk user (mababang paggamit ng droga)? Paano kung isa akong low-risk user? ",
       "response": "Ang isang mababang paggamit ng droga ay tumutukoy sa isang indibidwal na gumagamit ng droga sa paraang nagdudulot ng minimal na negatibong mga epekto sa pangkalahatang kalusugan at kabutihan ng kanilang buhay. Kung ikaw ay itinuturing na mababa na tagagamit matapos ang pagsusuri, ikaw ay dapat sumailalim sa Pangkalahatang Intervensyon o General Intervention."
     },
     {
-      "id": "5",
-      "tags": "[]",
+      "id": "_ta_5",
+      "tags": [],
       "body": "Huhulihin ba ko kung gumamit ako ng droga? Huhulihin ba ako kung minsan lang ako gumamit ng droga?",
       "response": "Hindi. Kung ikaw ay itinuturing na minsan lang gumamit ng droga o mababang tagagamit o ito ay iyong unang pagkakataon matapos ang pagsusuri, ikaw ay dapat sumailalim sa Pangkalahatang Interbensyon (General Intervention), maliban na lamang kung ikaw ay nagkasala ng isang krimen sa ilalim ng impluwensiya ng droga, o ikaw ay inakusahan ng pangalawang pagkakataon sa paggamit ng droga."
     },
     {
-      "id": "6",
-      "tags": "[]",
+      "id": "_ta_6",
+      "tags": [],
       "body": "Ano ang ibig sabihin ng katamtamang panganib o banayad na tagagamit? (moderate risk or mild user)",
       "response": "Ang isang katamtaman o katamtamang panganib na tagagamit o minsan lang gumamit ng droga ay tumutukoy sa isang indibidwal na gumagamit ng droga sa antas na nasa pagitan ng mababang panganib ng paggamit at delikadong o malalang paggamit. Karaniwang pinapayuhan na sumailalim sa CBDRP (Community-Based Drug Rehabilitation Program) ang mga katamtaman na tagagamit."
     },
     {
-      "id": "7",
-      "tags": "[]",
+      "id": "_ta_7",
+      "tags": [],
       "body": "Huhulihin ba ako ng parusa kung ako ay minsan o katamtaman o banayad na tagagamit ng droga?",
       "response": "Hindi. Kung itinuturing na unang pagkakataon na katamtaman na tagagamit, ikaw ay irerekomenda na sumailalim sa CBDRP (Community-Based Drug Rehabilitation Program)."
     },
     {
-      "id": "8",
-      "tags": "[]",
+      "id": "_ta_8",
+      "tags": [],
       "body": "Ano ang ibig sabihin ng high-risk user?",
       "response": "Ang mataas na panganib na tagagamit ng droga (high-risk) ay tumutukoy sa isang indibidwal na gumagamit ng droga sa paraang nagdudulot ng malalaking panganib sa kanilang kapakanan, at pangkalahatang kalusugan. Meron din itong mataas na posibilidad ng negatibong mga epekto sa kabuhayan, at mga personal na relasyon."
     },
     {
-      "id": "9",
-      "tags": "[]",
+      "id": "_ta_9",
+      "tags": [],
       "body": "Ano ang mangyayari kung ako ay isang high-risk user omay  mataas na panganib na tagagamit?  Huhulihin ba ako kung ako ay isang high risk user o mataas na panganib na tagagamit? ",
       "response": "Ang isang high-risk user o mataas na panganib na tagagamit ay maaaring maiuri sa mga kategoryang katamtaman, o malubhang tagagamit batay sa pagsusuri ng pagka-depende sa droga (drug dependency exam o DDE)."
     },
     {
-      "id": "10",
-      "tags": "[]",
+      "id": "_ta_10",
+      "tags": [],
       "body": "Anong nangyayari sa isang drug test? ",
       "response": "Sa layunin na maging matagumpay ang programang pang-intervensyon, inirerekumenda na ang pasyente ay sumasailalim sa Community Based Drug Rehabilitation Program (CBDRP) kung saan sasailalim sa Drug Testing na isasagawa sa hindi bababa sa tatlong (3) pagkakataon sa panahon ng programang pang-intervensyon."
     },
     {
-      "id": "11",
-      "tags": "[]",
+      "id": "_ta_11",
+      "tags": [],
       "body": "Bakit kailangang ganapin ang drug test ng tatlong (3) beses? ",
       "response": "Ang mga drug test ay isasagawa ng unang beses sa pagpasok ng kliyente sa programa, anumang oras sa loob ng panahon ng pagsunod sa programa, at huling huling sa oras bago ang pansamantala o pagtatapos ng pangunahing programa.\n"
     },
     {
-      "id": "12",
-      "tags": "[]",
+      "id": "_ta_12",
+      "tags": [],
       "body": "Ano ang Pangkalahatang Intervensyon? ",
       "response": "Ang pangkalahatang interbensyon o General Intervention ay nakapaloob sa iba't ibang mga pamamaraan at aksyon upang matulungan ang mga taong may problema sa droga upang mapabilis ang paggaling ng mga ito. Layunin ng mga interbensyong ito na magbigay suporta, magpromote ng positibong pagbabago, at maiwasan ang karagdagang pinsala sa kasulugan."
     },
     {
-      "id": "13",
-      "tags": "[]",
+      "id": "_ta_13",
+      "tags": [],
       "body": "Ano ang mga aktibidad sa ilalim ng Pangkalahatang Intervensyon (General Intervention)? ",
       "response": "Ang General Intervention ay maaaring magkabilang ang mga sumusunod na aktibidad: Pagsusuri o evaluation, counseling at therapy, preventive education at pagbibigay impormasyon, support groups o pagtanggap ng suporta mula sa mga taong may parehong mga karanasan, after-care planning o patuloy na pangangalaga, pangkalahatang interbensyon sa kahalagahan ng pagsasama ng pamilya at pagkakaroon ng suporta mula sa mga mahal sa buhay."
     },
     {
-      "id": "14",
-      "tags": "[]",
+      "id": "_ta_14",
+      "tags": [],
       "body": "Mayroon bang iba't ibang uri ng mga programa para sa rehabilitasyon na available?",
       "response": "Meron. Ito ay ang Pangkalahatang Intervensyon o General Intervention (GI), Community Based Drug Rehabilitation Program (CBDRP), at Treatment and Rehabilitation Center (TRC) na tumutukoy sa mga programa na ginagawa sa loob ng isang pasilidad. Para naman sa mga drug offenders, mayroon tayong Balay Silangan Program."
     },
     {
-      "id": "15",
-      "tags": "[]",
+      "id": "_ta_15",
+      "tags": [],
       "body": "Saan ako makakahanap ng isang drug rehabilitation center malapit sa akin? ",
       "response": "Maaari kang magtungo sa lokal na tanggapan ng City o Municipal Health Office (karaniwan sa loob ng munisipyo o lungsod) o sa lokal na Police Station at Voluntary Help desk ng inyong barangay."
     },
     {
-      "id": "16",
-      "tags": "[]",
+      "id": "_ta_16",
+      "tags": [],
       "body": "Maaari ka ba akong magbigay ng impormasyon tungkol sa iba't ibang pagpipilian na rehabilitation na available? ",
       "response": "Ang mga serbisyong kinakailangan bago ang treatment ay ang screening o pagsusuri, maikling interbensyon (brief intervention), o pagrekomenda at referral."
     },
     {
-      "id": "17",
-      "tags": "[]",
+      "id": "_ta_17",
+      "tags": [],
       "body": "Magkano ang gastos na kaakibat ng mga programa sa rehabilitasyon ng droga? Magkano magpa-rehab?",
       "response": "Wala pong babayaran maliban na lamang kung may inirerekomendang pribadong pasilidad o institusyon."
     },
     {
-      "id": "18",
-      "tags": "[]",
+      "id": "_ta_18",
+      "tags": [],
       "body": "Mayroon bang mga rehabilitasyon na pinopondohan ng gobyerno o abot-kayang mga pagpipilian na mga programa? ",
       "response": "Ang pamahalaan ay nagbibigay ng ilang pinopondohang mga options o pagpipilian para sa mga indibidwal na gumagamit ng droga (persons who used drugs / PWUDs). Ang mga pagpipiliang ito ay kinabibilangan ng Community-based Drug Rehab Program (CBDRP), General Intervention Program (GI), at ang Balay Silangan Reformation Program (BSRP)."
     },
     {
-      "id": "19",
-      "tags": "[]",
+      "id": "_ta_19",
+      "tags": [],
       "body": "Mayroon bang mga support groups o mga programa para sa pangangalaga pagkatapos ng rehabilitasyon (after-care programs)? ",
       "response": "Oo, mayroong mga programa mula sa DSWD, Narcotics Anonymous, TESDA, o iba pang pribadong mga grupo na may mga adhikain laban sa droga."
     },
     {
-      "id": "20",
-      "tags": "[]",
+      "id": "_ta_20",
+      "tags": [],
       "body": "Ano ang mga benepisyo ng boluntaryong pagpapasuko o pagsuko sa otoridad / Gusto ko mag-surrender",
       "response": "Ang boluntaryong pagpapasuko o pagsuko ay maaaring magdulot ng ilang mga benepisyo, pinaka-mahalaga na ang pagkakaroon ng access sa paggamot, isang mas suportadong kapaligiran, at personal na pag-unlad at kalusugan. "
     },
     {
-      "id": "21",
-      "tags": "[]",
+      "id": "_ta_21",
+      "tags": [],
       "body": "Paano ko matutulungan ang isang mahal sa buhay na may problema sa paggamit ng droga? Paano ko matutulungan ang isang taong naghihirap sa paggamit ng droga? ",
       "response": "Payuhan na sumailalim sa screening, kumuha ng drug test, at pagkatapos ay dalhin siya sa lokal na city o municipal health center."
     },
     {
-      "id": "22",
-      "tags": "[]",
+      "id": "_ta_22",
+      "tags": [],
       "body": "Mayroon bang alternatibong o holistikong paraan sa rehabilitasyon mula sa droga? ",
       "response": "Magsisimula ito sa pamamagitan ng screening. Antayin kung mayroong rekomendasyon na sumailalim sa isang rehabilitation program o pumasok sa pribadong pasilidad. "
     },
     {
-      "id": "23",
-      "tags": "[]",
+      "id": "_ta_23",
+      "tags": [],
       "body": "(Gusto ko na sumuko). Ligtas bang sumuko dahil sa paggamit ng droga? ",
       "response": "Oo, ligtas na sumuko at humingi ng tulong sa dahil sa paggamit ng droga. Ang pagsurrender ay nagbibigay ng pagkakataon sa mga indibidwal na makakuha ng tamang tulong, interbensyon, at suporta upang malunasan ang kanilang mga suliranin kaugnay ng droga. Ito ay isang hakbang tungo sa paggaling at rehabilitasyon, nagtataguyod ng pangkalahatang kapakanan at pagsusulong ng riskong nauugnay sa paggamit ng droga. Bukod dito, maaring magbigay rin ang pagsurender ng mga legal na proteksyon at tulong mula sa mga may kinalaman na awtoridad at organisasyon na naka-specialize sa pagtulong sa mga indibidwal na may problema sa droga."
     },
     {
-      "id": "24",
-      "tags": "[]",
+      "id": "_ta_24",
+      "tags": [],
       "body": "Mapagkakatiwalaan ko ba ang mga taong naka-assign sa akin sa proseso ng pag-screen / screening?",
       "response": "Oo. May mga propesyonal kita na health providers o mga nangangalaga sa kalusugan na magtitiyak sa iyong privacy. Ang iyong impormasyon ay kukunin lamang sa iyong pagsang-ayon."
     },
     {
-      "id": "25",
-      "tags": "[]",
+      "id": "_ta_25",
+      "tags": [],
       "body": "Paano ko malalaman kung ang isang drug rehabilitation center ay kilala at may lisensya?",
       "response": "Ang sentro ay dapat na akreditado ng DOH."
     },
     {
-      "id": "26",
-      "tags": "[]",
+      "id": "_ta_26",
+      "tags": [],
       "body": "Mayroon bang PNP o PDEA Officer na pupunta sa aking screening?",
       "response": "Walang kasamang PNP o PDEA personnel sa iyong screening sa health center."
     },
     {
-      "id": "27",
-      "tags": "[]",
+      "id": "_ta_27",
+      "tags": [],
       "body": "Kamusta",
       "response": "RANDOM"
     },
     {
-      "id": "28",
-      "tags": "[]",
+      "id": "_ta_28",
+      "tags": [],
       "body": "Saan pwedeng magreport ng drug personality / activity? ",
       "response": "Upang magreport ng isang aktibidad o personalidad tungkol sa droga, makipag-ugnay sa 'Isumbong Mo sa PDEA' sa +63 995 354 7020. Upang makipag-ugnayan sa PDEA VI Office, tawagan o i-text ang +63 998-447-5633."
     }

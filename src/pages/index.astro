@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Chat from '../components/Chat'
+enum IChatMode {
+    English = 0,
+    Tagalog = 0,
+    Hiligaynon = 0
+} 
 ---
 
 <Layout title="Hello, I'm PEDRO">
@@ -11,7 +16,7 @@ import Chat from '../components/Chat'
 			<span class="font-bold">Notice:</span> All information you provide while using this chatbot is guaranteed to be <span class="font-bold">private and confidential</span>. To start, pick a question or type it directly in the text box below.
 			Read our <a class="underline" href="/privacy">Privacy Policy</a>.
 		</p>
-		<Chat client:only />
+		<Chat ChatMode={0} client:only />
 	</main>
 </Layout>
 
