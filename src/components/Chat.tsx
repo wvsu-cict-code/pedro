@@ -62,9 +62,12 @@ export default function Chat(props: any) {
     const [questions_visible, toggleQuestions] = useState(true)
     const [conversations, setConverstations] = useState<IConverstions>([])
     const [is_loading, setLoading] = useState(false)
+    const [NotFound_text, setNotFoundText] = useState('')
     const [result_count, setResultCount] = useState(6)
     useEffect(() => {
         let timer: any = null;
+
+        setNotFoundText(getChatNotFoundText(ChatMode))
 
         if (is_loading) {
             timer = setInterval(() => {
@@ -86,17 +89,27 @@ export default function Chat(props: any) {
         setConverstations(conversations => [...conversations, { position: Position.Right, message: <span>{query}</span>, id: uuidv4() }])
     }
 
+    function setQuestions(isClosed:boolean){
+        if(ChatMode == IChatMode.English){
+            setResultCount(en_data.length)
+        }     
+        if(ChatMode == IChatMode.Hiligaynon){
+            setResultCount(en_data.length)
+        }    
+        if(ChatMode == IChatMode.Tagalog){
+            setResultCount(en_data.length)
+        }           
+        toggleQuestions(isClosed)
+        scroll.scrollToTop()
+    }
+
     function replyMessage(query: string) {
 
         const result_en = fuse_en.search(query)
         const result_ta = fuse_ta.search(query)
         const result_hi = fuse_hi.search(query)
 
-        const not_found_message: ReactElement = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> I found no matches with your query. You can check our </span><a className="underline" href="#" onClick={e => {
-            e.preventDefault()
-            setResultCount(en_data.length)
-            toggleQuestions(true)
-        }}>FAQ list</a>.</span>
+        let not_found_message: ReactElement = <></>
 
         if (ChatMode == IChatMode.English) {
             if (result_en.length > 0) {
@@ -106,6 +119,11 @@ export default function Chat(props: any) {
             } else {
                 setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
             }
+
+            not_found_message = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> {getChatNotFoundText(ChatMode)} </span><a className="underline" href="#" onClick={e => {
+                e.preventDefault()
+                setQuestions(true)
+            }}>FAQ list</a>.</span>
         }
 
         if (ChatMode == IChatMode.Tagalog) {
@@ -116,6 +134,11 @@ export default function Chat(props: any) {
             } else {
                 setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
             }
+
+            not_found_message = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> {getChatNotFoundText(ChatMode)} </span><a className="underline" href="#" onClick={e => {
+                e.preventDefault()
+                setQuestions(true)
+            }}>FAQ list</a>.</span>
         }
 
         if (ChatMode == IChatMode.Hiligaynon) {
@@ -126,8 +149,22 @@ export default function Chat(props: any) {
             } else {
                 setConverstations(conversations => [...conversations, { id: uuidv4(), position: Position.Left, message: not_found_message }])
             }
+
+            not_found_message = <span><FaExclamationCircle className="text-yellow-500 mb-2" /><span> {getChatNotFoundText(ChatMode)} </span><a className="underline" href="#" onClick={e => {
+                e.preventDefault()
+                setQuestions(true)
+            }}>FAQ list</a>.</span>
         }
 
+    }
+
+    function getChatNotFoundText(mode: IChatMode){
+        switch (mode) {
+            case IChatMode.English: return "Can't find what you are looking for? Type your question here."
+            case IChatMode.Hiligaynon: return 'Ano ang imo buot hambalon? Daw indi ko makita ang ginapangita mo.Ibutang sa liwat ang imo pamangkot.'
+            case IChatMode.Tagalog: return 'Ano ang ibig mong sabihin? Hindi ko mahanap ang hinahanap mo. Pakilagay muli ng iyong tanong.'
+            default: return ''
+        }
     }
 
     console.log(props)
@@ -194,16 +231,20 @@ export default function Chat(props: any) {
             </div>
             <div className="mt-6">
                 <div className='mb-2'>
+                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
                     {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                     {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
-                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}                  
-                    
+                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}      
+                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e)=>{
+                        e.preventDefault()
+                        setQuestions(true)
+                    }}>View All Questions</a>}            
                 </div>
                 <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
                     <div className="md:col-span-5">
                         <textarea value={chatbox_text} onChange={({ target }) => {
                             setChatBoxText(target.value)
-                        }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder="Can't find what you are looking for? Type your question here." /></div>
+                        }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder={''} /></div>
                     <button onClick={() => sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
                 </div>                
             </div>
