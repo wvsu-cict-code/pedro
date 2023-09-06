@@ -21,6 +21,8 @@ import BouncingLoader from "./BouncingLoader";
 import Card from "./Card";
 import ChatBubble from "./ChatBubble";
 
+import Joyride, { CallBackProps, STATUS, Step } from 'react-joyride';
+import { useSetState } from 'react-use';
 
 const fuseOptions = {
     includeScore: true,
@@ -52,6 +54,11 @@ interface IConversation {
     id: Key
 }
 
+interface State {
+    run: boolean;
+    steps: Step[];
+}
+
 interface IConverstions extends Array<IConversation> { }
 
 export default function Chat(props: any) {
@@ -64,6 +71,26 @@ export default function Chat(props: any) {
     const [is_loading, setLoading] = useState(false)
     const [NotFound_text, setNotFoundText] = useState('')
     const [result_count, setResultCount] = useState(6)
+    const [{ run, steps }, setState] = useSetState<State>({
+        run: false,
+        steps: [
+            {
+                content: <h2>Let's begin our journey!</h2>,
+                locale: { skip: <strong aria-label="skip">S-K-I-P</strong> },
+                placement: 'center',
+                target: 'body',
+              },
+        ]
+    })
+
+    const handleClickStart = (event: React.MouseEvent<HTMLElement>) => {
+        event.preventDefault();
+    
+        setState({
+          run: true,
+        });
+      };
+
     useEffect(() => {
         let timer: any = null;
 
@@ -89,16 +116,16 @@ export default function Chat(props: any) {
         setConverstations(conversations => [...conversations, { position: Position.Right, message: <span>{query}</span>, id: uuidv4() }])
     }
 
-    function setQuestions(isClosed:boolean){
-        if(ChatMode == IChatMode.English){
+    function setQuestions(isClosed: boolean) {
+        if (ChatMode == IChatMode.English) {
             setResultCount(en_data.length)
-        }     
-        if(ChatMode == IChatMode.Hiligaynon){
+        }
+        if (ChatMode == IChatMode.Hiligaynon) {
             setResultCount(en_data.length)
-        }    
-        if(ChatMode == IChatMode.Tagalog){
+        }
+        if (ChatMode == IChatMode.Tagalog) {
             setResultCount(en_data.length)
-        }           
+        }
         toggleQuestions(isClosed)
         scroll.scrollToTop()
     }
@@ -158,7 +185,7 @@ export default function Chat(props: any) {
 
     }
 
-    function getChatNotFoundText(mode: IChatMode){
+    function getChatNotFoundText(mode: IChatMode) {
         switch (mode) {
             case IChatMode.English: return "Can't find what you are looking for? Type your question here."
             case IChatMode.Hiligaynon: return 'Ano ang imo buot hambalon? Daw indi ko makita ang ginapangita mo.Ibutang sa liwat ang imo pamangkot.'
@@ -171,6 +198,20 @@ export default function Chat(props: any) {
 
     return (
         <div>
+            <Joyride
+                continuous
+                scrollToFirstStep
+                run={run}
+                showProgress
+                showSkipButton
+                steps={steps}
+                styles={{
+                    options: {
+                        zIndex: 10000,
+                    },
+                }}
+            />
+            <div className='initial-questions'>
             {questions_visible && <ul role="list" className="grid md:grid-cols-2 gap-4 sm:grid-cols-1">
                 {ChatMode == IChatMode.English && en_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
                     onClick={() => {
@@ -194,6 +235,7 @@ export default function Chat(props: any) {
                     body={question.body}
                 />)}
             </ul>}
+            </div>
             <div className="mt-4 grid grid-cols-1 gap-4">
                 {
                     ChatMode == IChatMode.English && <ChatBubble
@@ -201,23 +243,23 @@ export default function Chat(props: any) {
                         id={uuidv4()}
                         position={Position.Left}
                         message={<span>{shuffle(intro_en_data)[0].body}</span>}
-                    />                    
+                    />
                 }
                 {
                     ChatMode == IChatMode.Tagalog && <ChatBubble
-                    key={"intro"}
-                    id={uuidv4()}
-                    position={Position.Left}
-                    message={<span>{shuffle(intro_ta_data)[0].body}</span>}
-                />
+                        key={"intro"}
+                        id={uuidv4()}
+                        position={Position.Left}
+                        message={<span>{shuffle(intro_ta_data)[0].body}</span>}
+                    />
                 }
                 {
                     ChatMode == IChatMode.Hiligaynon && <ChatBubble
-                    key={"intro"}
-                    id={uuidv4()}
-                    position={Position.Left}
-                    message={<span>{shuffle(intro_hi_data)[0].body}</span>}
-                />
+                        key={"intro"}
+                        id={uuidv4()}
+                        position={Position.Left}
+                        message={<span>{shuffle(intro_hi_data)[0].body}</span>}
+                    />
                 }
                 {conversations.map(i => (
                     <ChatBubble
@@ -231,14 +273,15 @@ export default function Chat(props: any) {
             </div>
             <div className="mt-6">
                 <div className='mb-2'>
+                {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/" onClick={handleClickStart}>Help</a>}
                     {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
                     {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                     {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
-                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}      
-                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e)=>{
+                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
+                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
                         e.preventDefault()
                         setQuestions(true)
-                    }}>View All Questions</a>}            
+                    }}>View All Questions</a>}
                 </div>
                 <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
                     <div className="md:col-span-5">
@@ -246,7 +289,7 @@ export default function Chat(props: any) {
                             setChatBoxText(target.value)
                         }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder={''} /></div>
                     <button onClick={() => sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
-                </div>                
+                </div>
             </div>
         </div>
 
