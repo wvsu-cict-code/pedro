@@ -178,5 +178,35 @@
       "tags": [],
       "body": "Paano?",
       "response": "Pwede ka mamangkot sa imo lokal nga City or Municipal Health Office / Center (kadalas sa city o municipal hall) ukon sa lokal nga Police Station kag Voluntary Help desk sang imo barangay."
+    },
+    {
+      "id": "_hi_31",
+      "tags": [],
+      "body": "Sa diin dapat ko magsurrender? / Sa diin dapat ako magsurrender kay naggamit ako sang droga?",
+      "response": "Sa inyo nga Barangay Help Desk. Ang Barangay Help Desk nagahatag bulig sa mga indibidwal nga nagapangita sang bulig para sa mga butang nga may kaangtanan sa droga paagi sa pag-refer sa angay nga mga treatment centers, rehabilitation facilities, counseling services, ukon iban pa nga mga kapareho nga mga interbensiyon nga upod sa mga programa sg komunidad ukon malapit nga mga lugar."
+    },
+    {
+      "id": "_hi_32",
+      "tags": [],
+      "body": "Ano ang gakatabo kung magsurrender ako sa amon Barangay Help Desk?",
+      "response": "Ang Barangay Help Desk nagahatag bulig sa mga indibidwal nga nagapangita sang bulig para sa mga butang nga may kaangtanan sa droga paagi sa pag-refer sa angay nga mga treatment centers, rehabilitation facilities, counseling services, ukon iban pa nga mga kapareho nga mga interbensiyon nga upod sa mga programa sg komunidad ukon malapit nga mga lugar."
+    },
+    {
+      "id": "_hi_33",
+      "tags": [],
+      "body": "Ano ang matabo kon tawagon ako nga magkadto sa barangay bangod ginahinalaan ako nga ginagamit/ ginabaligya ko droga?",
+      "response": "Kinahanglan mo sa gihapon magkadto sa barangay. Ang Barangay Voluntary Help Desk nagahatag bulig sa mga indibidwal nga nagapangita sang bulig para sa mga butang nga may kaangtanan sa droga paagi sa pag-refer sa angay nga mga treatment centers, rehabilitation facilities, counseling services, ukon iban pa nga mga kapareho nga mga interbensiyon nga upod sa mga programa sg komunidad ukon malapit nga mga lugar."
+    },
+    {
+      "id": "_hi_34",
+      "tags": [],
+      "body": "Ano ang matabo kon nanago na ako? / Ano ang matabo kon tawgon ako nga magpakita sa barangay tungod ginahinalaan ako nga gagamit o gabaligya sg droga pero nanago na ako ukon nagpalagyo sa amon barangay?",
+      "response": "Kung ipatawag ka sa inyo barangay bangud kay ikaw ginasuspetsahan nga inbolb sa ilegal nga nga droga, importante gid nga atubangon mo ang sitwasyon nga may responsibilidad kag may pag-tuo sa layi. \nNaintindihan ko ang imo kabalaka, pero kinahanglan nga tuytuyan mo ang imo kaugalingon kag panumdumon ang posibleng nga legal nga mga konsekwensya kon ikaw magpalagyo sa mga awtoridad. \nImbes nga magpanago, ginarekomendar ko guid nga mas maayo nga magpakita ka sa inyo barangay kung ikaw ipatawag."
+    },
+    {
+      "id": "_hi_35",
+      "tags": [],
+      "body": "Paano ko malikawan ang akon kabalaka samtang galakat ako sa dalan nga indi ako pagdakpon kay nagapa-rehab naman ako? / Paano ko makatulog sang maayo kung gab-e matapos ako ma-upod sa isa ka drug operation?",
+      "response": "Panumduma ang imo kaugalingon labi na ang imo nga mental health. \nKung ikaw stressed, nabudlayan magtulog ukon may iban ka pa nga napanumdum nga bug-at sa imo paminsaron, magtawag sa DOH Mental Health Hotline sa numero 0919 123 4567. \nMay ara nga mga propesyunal nga handa nga magbulig kag suporta sa imo. Unaha gd sang atipan ang imo kaugalingon. Panumduma nga ang pagpangayo sg bulig isa ka maayo nga tikang para kamayuhan sang imo buwas damlag. "
     }
    ]

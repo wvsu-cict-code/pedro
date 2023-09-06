@@ -1,182 +1,218 @@
 [
   {
-    "id": "_hi_1",
+    "id": "_en_1",
     "tags": [],
     "body": "What is the first step in the rehabilitation process?",
     "response": "The patient first undergoes screening and then gets a drug test."
   },
   {
-    "id": "_hi_2",
+    "id": "_en_2",
     "tags": [],
     "body": "What happens during a screening? ",
     "response": "It is a screening tool to assess an individual's substance use and identify potential risks or problems."
   },
   {
-    "id": "_hi_3",
+    "id": "_en_3",
     "tags": [],
     "body": "How long does the rehabilitation process typically last?",
     "response": "It depends on the severity of drug use if he or she is a low-risk, moderate, mild, high-risk, or severe user. \n\nThe rehab period varies depending on the intervention to be undertaken which will be determined based on the severity of drug use. "
   },
   {
-    "id": "_hi_4",
+    "id": "_en_4",
     "tags": [],
     "body": "What is a low-risk user? What if I’m a low-risk user?",
     "response": "A low-risk user of drugs refers to an individual who engages in substance use in a manner that poses minimal harm or negative consequences to their overall health and well-being. If diagnosed after the screening, one must undergo General Intervention."
   },
   {
-    "id": "_hi_5",
+    "id": "_en_5",
     "tags": [],
     "body": "Will I be jailed if I’m a low-risk user?",
     "response": "No. If diagnosed for the first time after the screening, one must undergo General Intervention, unless you violated a crime under the influence of drugs, or you were charged for drug use for the second time. "
   },
   {
-    "id": "_hi_6",
+    "id": "_en_6",
     "tags": [],
     "body": "What is a moderate or mild user?",
     "response": "A moderate user of drugs refers to an individual who engages in drug use at a level that falls between low-risk use and problematic or heavy use. Moderate users are often referred to undergo CBDRP (Community-Based Drug Rehabilitation Program).  \n\nModerate risk is the result of screening (ASSIST tool) while Mild Use or Mild dependency is a result of drug dependency exam (DDE) conducted for High Risk PWUDs. But both will be prescribed to undergo CBDRP Treatment. "
   },
   {
-    "id": "_hi_7",
+    "id": "_en_7",
     "tags": [],
     "body": "Will I be jailed if I’m a moderate or mild user?",
     "response": "No. If diagnosed for the first time as a moderate user, you will be referred to undergo a Community-Based Drug Rehabilitation Program (CBDRP), unless you violated a crime under the influence of drugs, or you were charged for drug use for the second time. "
   },
   {
-    "id": "_hi_8",
+    "id": "_en_8",
     "tags": [],
     "body": "What is a high-risk user?",
     "response": "A high-risk user of drugs refers to an individual who engages in drug use in a manner that poses significant risks to their health, well-being, and overall functioning."
   },
   {
-    "id": "_hi_9",
+    "id": "_en_9",
     "tags": [],
     "body": "What if I’m a high-risk user? Will I be jailed if I am a high-risk user?",
     "response": "A high-risk user may be classified into mild, moderate, or severe based on a drug dependency exam (DDE). Mild users under the DDE needs to undergo a Community-Based Drug Rehab Program (CBDRP). A moderate user may be referred to an outpatient program, and a severe user may be recommended to enter the Treatment and Rehabilitation Center (TRC)."
   },
   {
-    "id": "_hi_10",
+    "id": "_en_10",
     "tags": [],
     "body": "What happens during a drug test?",
     "response": "For purposes of evaluating the success of the intervention program, is it\n recommended that the patient who will undergo the Community Based Drug Rehabilitation Program (CBDRP) will be subjected to Drug Testing which shall be performed at least three (3) times during the intervention program."
   },
   {
-    "id": "_hi_11",
+    "id": "_en_11",
     "tags": [],
     "body": "Why will the drug test be conducted three (3) times?",
     "response": "The drug tests shall be conducted upon admission of the client to the program, any time within the program compliance period and lastly, prior to temporary release/primary program completion."
   },
   {
-    "id": "_hi_12",
+    "id": "_en_12",
     "tags": [],
     "body": "What is General Intervention?",
     "response": "General interventions in drug rehab involve various strategies and actions to aid those with drug abuse and facilitate recovery. These interventions aim to offer support, promote positive change, and prevent further harm."
   },
   {
-    "id": "_hi_13",
+    "id": "_en_13",
     "tags": [],
     "body": "What are the activities under General Intervention? What happens during a General Intervention?",
     "response": "General Intervention may involve assessment and evaluation, counselling and therapy, preventive education and information, support groups and peer support, after-care planning or continuity of care, and family involvement.  "
   },
   {
-    "id": "_hi_14",
+    "id": "_en_14",
     "tags": [],
     "body": "Are there different types of rehabilitation programs available?",
     "response": "Yes. These are the General Intervention (GI),  Community Based Drug Rehabilitation Program (CBDRP), and the Treatment and Rehabilitation Center (TRC) which is facility-based. For drug offenders, we have the Balay Silangan Program."
   },
   {
-    "id": "_hi_15",
+    "id": "_en_15",
     "tags": [],
     "body": "How do I find a drug rehabilitation center near me?",
     "response": "You may visit your local City or Municipal Health Office / Center (usually in the city or municipal hall) or the local Police Station and Voluntary Help desk of your barangay."
   },
   {
-    "id": "_hi_16",
+    "id": "_en_16",
     "tags": [],
     "body": "Can you provide information on the different treatment options available?",
     "response": "Services required prior to treatment are screening, brief intervention, or referral."
   },
   {
-    "id": "_hi_17",
+    "id": "_en_17",
     "tags": [],
     "body": "What are the costs associated with drug rehabilitation programs?",
     "response": "No fees unless referred to a private facility or institution."
   },
   {
-    "id": "_hi_18",
+    "id": "_en_18",
     "tags": [],
     "body": "Are there any government-funded or affordable rehabilitation options?",
     "response": "The government provides several funded options for individuals who have used drugs (PWUDs). These options include the Community-based Drug Rehab Program, General Intervention Program, and the Balay Silangan Reformation Program. In cases where drug use is severe or poses a high risk, the availability of these programs may also depend on the patient's financial situation (indigency) and the recommendation of a social worker."
   },
   {
-    "id": "_hi_19",
+    "id": "_en_19",
     "tags": [],
     "body": "Are there any support groups or aftercare programs available?",
     "response": "Yes. There are programs available from the DSWD, Narcotics Anonymous and TESDA, or other private anti-drug advocates.  "
   },
   {
-    "id": "_hi_20",
+    "id": "_en_20",
     "tags": [],
     "body": "What are the benefits of voluntary submission or surrender?",
     "response": "The voluntary submission or surrender can have several benefits most importantly access to treatment, a more supportive environment, and personal growth, health, and well-being."
   },
   {
-    "id": "_hi_21",
+    "id": "_en_21",
     "tags": [],
     "body": "How can I seek help for a loved one who is struggling with drug use? How can I help someone struggling with drug use?",
     "response": "Have him or her undergo screening, get a drug test, and then visit your local city or municipal health center. "
   },
   {
-    "id": "_hi_22",
+    "id": "_en_22",
     "tags": [],
     "body": "Are there any alternative or holistic approaches to drug rehabilitation?",
     "response": "Through a private facility, screening is the entry point."
   },
   {
-    "id": "_hi_23",
+    "id": "_en_23",
     "tags": [],
     "body": "Is it safe to surrender because of drug use?",
     "response": "Yes, it is safe to surrender and seek help for drug use. Surrendering can provide an opportunity for individuals to access proper intervention, treatment, and support to address their drug-related issues. It is a step towards recovery and rehabilitation. Additionally, surrendering may also provide legal protections and assistance from relevant authorities and organizations dedicated to assisting individuals with drug problems."
   },
   {
-    "id": "_hi_24",
+    "id": "_en_24",
     "tags": [],
     "body": "Can I trust those who will handle me during my surrender or screening process?",
     "response": "Yes. Health care professionals who will ensure your privacy. Your information will only be taken with your consent."
   },
   {
-    "id": "_hi_25",
+    "id": "_en_25",
     "tags": [],
     "body": "How can I determine if a drug rehabilitation center is reputable and licensed?",
     "response": "The center must be accredited by the DOH."
   },
   {
-    "id": "_hi_26",
+    "id": "_en_26",
     "tags": [],
     "body": "Will there be a PNP or PDEA Officer present during my screening?",
     "response": "No. There will be no PNP or PDEA personnel present during your screening with the health center. "
   },
   {
-    "id": "_hi_27",
+    "id": "_en_27",
     "tags": [],
     "body": "Hello",
     "response": "RANDOM"
   },
   {
-    "id": "_hi_28",
+    "id": "_en_28",
     "tags": [],
     "body": "I would like to report a drug personality/activity. ",
     "response": "To report a drug activity or personality, kindly contact ‘Isumbong Mo sa PDEA’ at +63 995 354 7020 or to contact PDEA VI office, call or text +63 998-447-5633. "
   },
   {
-    "id":"_hi_29",
+    "id":"_en_29",
     "tags": [],
     "body": "I am scared. But how do I surrender for drug rehab?",
     "response": "I'm really sorry to hear that you're feeling scared, but it's great that you're ready to seek help and surrender for drug rehab. \n\n I strongly encourage you to reach out to a professional who can guide you through the process of finding a suitable rehab center.  \n\n They will be able to provide you with the necessary support and resources to help you on your journey to recovery. Remember, you're not alone in this and there are people who are ready to assist you every step of the way."
   },
   {
-    "id":"_hi_30",
+    "id":"_en_30",
     "tags": [],
     "body": "How?",
     "response": "The patient first undergoes screening and then gets a drug test. And then you may visit your local City or Municipal Health Office / Center (usually in the city or municipal hall) or the local Police Station and Voluntary Help desk of your barangay."
+  },
+  {
+    "id": "_en_31",
+    "tags": [],
+    "body": "Where should I surrender? / Where should I surrender for using drugs?",
+    "response": "To your Barangay Help Desk. The Help Desk assists individuals seeking help for drug-related issues by providing referrals to appropriate treatment centers, rehabilitation facilities, counseling services, or other relevant resources available within the community or nearby areas."
+  },
+  {
+    "id": "_en_32",
+    "tags": [],
+    "body": "What happens if I surrender in the Barangay Help Desk?",
+    "response": "The Help Desk assists individuals seeking help for drug-related issues by providing referrals to appropriate treatment centers, rehabilitation facilities, counseling services, or other relevant resources available within the community or nearby areas."
+  },
+  {
+    "id": "_en_33",
+    "tags": [],
+    "body": "What happens if I am called to appear in the barangay because I am suspected to use/sell drugs? / What happens if I am called to appear in the barangay because I am suspected to be a user or seller of drugs?",
+    "response": "You must appear in the barangay. The Barangay through its Voluntary Help Desk assists individuals seeking help for drug-related issues by providing referrals to appropriate treatment centers, rehabilitation facilities, counseling services, or other relevant resources available within the community or nearby areas."
+  },
+  {
+    "id": "_en_34",
+    "tags": [],
+    "body": "What if I already went into hiding? / What happens if I am called to appear in the barangay because I am suspected of using/selling drugs but I already went into hiding?",
+    "response": "If you ever find yourself in a situation where you are called to appear in the barangay or there are suspicions of your involvement in illegal drug activity, it is vital that you handle the situation responsibly and in compliance with the law. \nI understand your concerns, but it is important to prioritize your safety while considering the potential legal consequences of evading authorities. \nInstead of going into hiding, I would strongly recommend adopting a proactive approach to resolve the situation, and best to appear in the barangay when summoned."
+  },
+  {
+    "id": "_en_35",
+    "tags": [],
+    "body": "How can I have peace of mind on the streets while I am undergoing rehab? / How can I sleep better at night after I was subjected to an operation?",
+    "response": "Prioritize your mental well-being. If you're facing mental stress, sleep difficulties, or other challenges, reach out to the DOH Mental Health Hotline at 0919 123 4567. Trained professionals are ready to support you. Taking care of your mental health is a sign of strength—remember, you're not alone. For you or someone you care about, don't hesitate to call. Let's prioritize mental health together. Take care."
+  },
+  {
+    "id": "_en_36",
+    "tags": [],
+    "body": "I have already graduated but still required to attend some activities, when will this end?",
+    "response": "Doing your part by active cooperation in building trust with the authorities and people helping you in your rehabilitation and reformation creates a safer and more trusting community. "
   }
  ]
