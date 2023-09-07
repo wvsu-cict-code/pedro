@@ -1,25 +1,27 @@
-import 'intro.js/introjs.css';
-import { Steps, Hints } from 'intro.js-react';
-import Fuse from 'fuse.js';
-import { Key, ReactElement, useEffect, useState } from 'react';
-import { FaExclamationCircle, FaPaperPlane, FaHome } from "react-icons/fa";
-import { animateScroll as scroll } from 'react-scroll';
-import { TypeAnimation } from "react-type-animation"
-import { v4 as uuidv4 } from 'uuid';
 import shuffle from 'fisher-yates';
+import Fuse from 'fuse.js';
+import { Steps } from 'intro.js-react';
+import 'intro.js/introjs.css';
+import { Key, ReactElement, useEffect, useState } from 'react';
+import { FaExclamationCircle, FaPaperPlane } from "react-icons/fa";
+import { animateScroll as scroll } from 'react-scroll';
+import { TypeAnimation } from "react-type-animation";
+import { v4 as uuidv4 } from 'uuid';
+import extro_en_data from '../data/en/extro.json';
+import intro_en_data from '../data/en/intro.json';
 import en_data from '../data/en/questions.json';
-import intro_en_data from '../data/en/intro.json'
-import extro_en_data from '../data/en/extro.json'
 
+import extro_ta_data from '../data/ta/extro.json';
+import intro_ta_data from '../data/ta/intro.json';
 import ta_data from '../data/ta/questions.json';
-import intro_ta_data from '../data/ta/intro.json'
-import extro_ta_data from '../data/ta/extro.json'
 
+import extro_hi_data from '../data/hi/extro.json';
+import intro_hi_data from '../data/hi/intro.json';
 import hi_data from '../data/hi/questions.json';
-import intro_hi_data from '../data/hi/intro.json'
-import extro_hi_data from '../data/hi/extro.json'
 
-import steps from '../tour/tour_data_en.json'
+import steps_en from '../tour/tour_data_en.json';
+import steps_ta from '../tour/tour_data_ta.json';
+import steps_hi from '../tour/tour_data_hi.json';
 
 import BouncingLoader from "./BouncingLoader";
 import Card from "./Card";
@@ -177,13 +179,27 @@ export default function Chat(props: any) {
 
     return (
         <>
-        <button className="bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2 mb-4" onClick={()=>setStartGuidedTour(true)}>Start Guided Tour</button>
-            <Steps
+            {ChatMode == IChatMode.English && <button className="bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2 mb-4" onClick={() => setStartGuidedTour(true)}>Start Guided Tour</button>}
+            {ChatMode == IChatMode.Tagalog && <button className="bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2 mb-4" onClick={() => setStartGuidedTour(true)}>Paano Gamitin ang Chatbot?</button>}
+            {ChatMode == IChatMode.Hiligaynon && <button className="bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2 mb-4" onClick={() => setStartGuidedTour(true)}>Paano Mag-pamangkot?</button>}
+            {ChatMode == IChatMode.English && <Steps
                 enabled={start_guided_tour}
-                steps={steps}
+                steps={steps_en}
                 initialStep={0}
                 onExit={() => { console.log("test") }}
-            />
+            />}
+            {ChatMode == IChatMode.Tagalog && <Steps
+                enabled={start_guided_tour}
+                steps={steps_ta}
+                initialStep={0}
+                onExit={() => { console.log("test") }}
+            />}
+            {ChatMode == IChatMode.Hiligaynon && <Steps
+                enabled={start_guided_tour}
+                steps={steps_hi}
+                initialStep={0}
+                onExit={() => { console.log("test") }}
+            />}
             <div>
                 {questions_visible && <ul role="list" className="steps--1 grid md:grid-cols-2 gap-4 sm:grid-cols-1">
                     {ChatMode == IChatMode.English && en_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
@@ -244,7 +260,7 @@ export default function Chat(props: any) {
                     {is_loading && <ChatBubble id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
                 </div>
                 <div className="mt-6">
-                    <div className='steps--3 mb-2'>                        
+                    <div className='steps--3 mb-2'>
                         {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
                         {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                         {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}

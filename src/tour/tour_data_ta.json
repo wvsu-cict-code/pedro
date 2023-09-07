@@ -1,0 +1,23 @@
+[
+    {
+        "element": ".steps--1",
+        "intro": "Para maka-gamit kaagad ng chatbot. Pwede pumili kaagad ng tanong sa listahan.",
+        "position": "right"
+    },
+    {
+        "element": ".steps--2",
+        "intro": "Kaagad ito sasagutin ni Pedro."
+    },
+    {
+        "element": ".steps--3",
+        "intro": "Pwede ka din pumili ng ibang lengwahe sa isasagot ni Pedro tulad ng Hiligaynon o English."
+    },
+    {
+        "element": ".steps--4",
+        "intro": "Kung wala sa listahan ang iyong tanong, pwede din na i-type ito sa text box."
+    },
+    {
+        "element": ".steps--5",
+        "intro": "I-press ang send na button kapag kumpleto na ang iyong tanong."
+    }
+]

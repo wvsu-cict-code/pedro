@@ -1,0 +1,23 @@
+[
+    {
+        "element": ".steps--1",
+        "intro": "Para dasig kasugod sa pag-gamit sang chatbot. Pwede ikaw kapili sang pamangkot sa diri nga listahan.",
+        "position": "right"
+    },
+    {
+        "element": ".steps--2",
+        "intro": "Si Pedro maga sabat dayon sa imo pamangkot."
+    },
+    {
+        "element": ".steps--3",
+        "intro": "Pwede ka man kapili sang iban nga lengwahe pareho sang English kag Tagalog."
+    },
+    {
+        "element": ".steps--4",
+        "intro": "Kon wala ka may makita nga pamakot sa lista pwede ka type mismo sang imo pamangkot."
+    },
+    {
+        "element": ".steps--5",
+        "intro": "I-click lang ang send nga button pagkatapos."
+    }
+]
