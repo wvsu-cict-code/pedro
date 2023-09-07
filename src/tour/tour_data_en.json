@@ -1,0 +1,23 @@
+[
+    {
+        "element": ".steps--1",
+        "intro": "To quickly get started, you may choose a question from this list.",
+        "position": "right"
+    },
+    {
+        "element": ".steps--2",
+        "intro": "Pedro will then respond to your question."
+    },
+    {
+        "element": ".steps--3",
+        "intro": "Pedro also supports additional native languages like Tagalog and Hiligaynon"
+    },
+    {
+        "element": ".steps--4",
+        "intro": "If you can't find a common question, you can also ask Pedro directly."
+    },
+    {
+        "element": ".steps--5",
+        "intro": "Just click send upon completing your question entry."
+    }
+]

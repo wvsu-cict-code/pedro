@@ -16,9 +16,9 @@ export default function ChatBubble({ position, message }: IProps) {
         <div>
             <div className={`${position ? 'text-right' : 'text-left'} my-2`}>
                 {
-                    message ? <div className={`w-fit rounded-lg border border-gray-100 shadow-md text-gray-900 p-4 ${position ? 'bg-green-100 mr-0 ml-auto' : 'bg-white'} `}>
+                    message ? <div className={`steps--2 w-fit rounded-lg border border-gray-100 shadow-md text-gray-900 p-4 ${position ? 'bg-green-100 mr-0 ml-auto' : 'bg-white'} `}>
                         {message}
-                    </div> : <div className={`w-fit rounded-lg border border-gray-100 shadow-md text-gray-900 p-4 bg-orange-400 `}>
+                    </div> : <div className={`steps--2 w-fit rounded-lg border border-gray-100 shadow-md text-gray-900 p-4 bg-orange-400 `}>
                         {message ? message : 'Error retrieving message.'}
                     </div>
                 }

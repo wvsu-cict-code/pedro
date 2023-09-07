@@ -1,3 +1,5 @@
+import 'intro.js/introjs.css';
+import { Steps, Hints } from 'intro.js-react';
 import Fuse from 'fuse.js';
 import { Key, ReactElement, useEffect, useState } from 'react';
 import { FaExclamationCircle, FaPaperPlane, FaHome } from "react-icons/fa";
@@ -17,12 +19,11 @@ import hi_data from '../data/hi/questions.json';
 import intro_hi_data from '../data/hi/intro.json'
 import extro_hi_data from '../data/hi/extro.json'
 
+import steps from '../tour/tour_data_en.json'
+
 import BouncingLoader from "./BouncingLoader";
 import Card from "./Card";
 import ChatBubble from "./ChatBubble";
-
-import Joyride, { CallBackProps, STATUS, Step } from 'react-joyride';
-import { useSetState } from 'react-use';
 
 const fuseOptions = {
     includeScore: true,
@@ -31,6 +32,7 @@ const fuseOptions = {
         "body"
     ]
 }
+
 
 const wait_time = 1500
 
@@ -54,11 +56,6 @@ interface IConversation {
     id: Key
 }
 
-interface State {
-    run: boolean;
-    steps: Step[];
-}
-
 interface IConverstions extends Array<IConversation> { }
 
 export default function Chat(props: any) {
@@ -71,25 +68,7 @@ export default function Chat(props: any) {
     const [is_loading, setLoading] = useState(false)
     const [NotFound_text, setNotFoundText] = useState('')
     const [result_count, setResultCount] = useState(6)
-    const [{ run, steps }, setState] = useSetState<State>({
-        run: false,
-        steps: [
-            {
-                content: <h2>Let's begin our journey!</h2>,
-                locale: { skip: <strong aria-label="skip">S-K-I-P</strong> },
-                placement: 'center',
-                target: 'body',
-              },
-        ]
-    })
-
-    const handleClickStart = (event: React.MouseEvent<HTMLElement>) => {
-        event.preventDefault();
-    
-        setState({
-          run: true,
-        });
-      };
+    const [start_guided_tour, setStartGuidedTour] = useState(false)
 
     useEffect(() => {
         let timer: any = null;
@@ -197,101 +176,93 @@ export default function Chat(props: any) {
     console.log(props)
 
     return (
-        <div>
-            <Joyride
-                continuous
-                scrollToFirstStep
-                run={run}
-                showProgress
-                showSkipButton
+        <>
+        <button className="bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2 mb-4" onClick={()=>setStartGuidedTour(true)}>Start Guided Tour</button>
+            <Steps
+                enabled={start_guided_tour}
                 steps={steps}
-                styles={{
-                    options: {
-                        zIndex: 10000,
-                    },
-                }}
+                initialStep={0}
+                onExit={() => { console.log("test") }}
             />
-            <div className='initial-questions'>
-            {questions_visible && <ul role="list" className="grid md:grid-cols-2 gap-4 sm:grid-cols-1">
-                {ChatMode == IChatMode.English && en_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
-                    onClick={() => {
-                        sendMessage(question.body)
-                    }}
-                    tags={question.tags[0]}
-                    body={question.body}
-                />)}
-                {ChatMode == IChatMode.Tagalog && ta_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
-                    onClick={() => {
-                        sendMessage(question.body)
-                    }}
-                    tags={question.tags[0]}
-                    body={question.body}
-                />)}
-                {ChatMode == IChatMode.Hiligaynon && hi_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
-                    onClick={() => {
-                        sendMessage(question.body)
-                    }}
-                    tags={question.tags[0]}
-                    body={question.body}
-                />)}
-            </ul>}
-            </div>
-            <div className="mt-4 grid grid-cols-1 gap-4">
-                {
-                    ChatMode == IChatMode.English && <ChatBubble
-                        key={"intro"}
-                        id={uuidv4()}
-                        position={Position.Left}
-                        message={<span>{shuffle(intro_en_data)[0].body}</span>}
-                    />
-                }
-                {
-                    ChatMode == IChatMode.Tagalog && <ChatBubble
-                        key={"intro"}
-                        id={uuidv4()}
-                        position={Position.Left}
-                        message={<span>{shuffle(intro_ta_data)[0].body}</span>}
-                    />
-                }
-                {
-                    ChatMode == IChatMode.Hiligaynon && <ChatBubble
-                        key={"intro"}
-                        id={uuidv4()}
-                        position={Position.Left}
-                        message={<span>{shuffle(intro_hi_data)[0].body}</span>}
-                    />
-                }
-                {conversations.map(i => (
-                    <ChatBubble
-                        key={i.id}
-                        id={uuidv4()}
-                        position={i.position}
-                        message={i.message.props.children}
-                    />
-                ))}
-                {is_loading && <ChatBubble id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
-            </div>
-            <div className="mt-6">
-                <div className='mb-2'>
-                {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/" onClick={handleClickStart}>Help</a>}
-                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
-                    {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
-                    {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
-                    {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
-                    {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
-                        e.preventDefault()
-                        setQuestions(true)
-                    }}>View All Questions</a>}
+            <div>
+                {questions_visible && <ul role="list" className="steps--1 grid md:grid-cols-2 gap-4 sm:grid-cols-1">
+                    {ChatMode == IChatMode.English && en_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
+                        onClick={() => {
+                            sendMessage(question.body)
+                        }}
+                        tags={question.tags[0]}
+                        body={question.body}
+                    />)}
+                    {ChatMode == IChatMode.Tagalog && ta_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
+                        onClick={() => {
+                            sendMessage(question.body)
+                        }}
+                        tags={question.tags[0]}
+                        body={question.body}
+                    />)}
+                    {ChatMode == IChatMode.Hiligaynon && hi_data.slice(0, result_count).map((question: any) => <Card key={uuidv4()}
+                        onClick={() => {
+                            sendMessage(question.body)
+                        }}
+                        tags={question.tags[0]}
+                        body={question.body}
+                    />)}
+                </ul>}
+                <div className="mt-4 grid grid-cols-1 gap-4">
+                    {
+                        ChatMode == IChatMode.English && <ChatBubble
+                            key={"intro"}
+                            id={uuidv4()}
+                            position={Position.Left}
+                            message={<span>{shuffle(intro_en_data)[0].body}</span>}
+                        />
+                    }
+                    {
+                        ChatMode == IChatMode.Tagalog && <ChatBubble
+                            key={"intro"}
+                            id={uuidv4()}
+                            position={Position.Left}
+                            message={<span>{shuffle(intro_ta_data)[0].body}</span>}
+                        />
+                    }
+                    {
+                        ChatMode == IChatMode.Hiligaynon && <ChatBubble
+                            key={"intro"}
+                            id={uuidv4()}
+                            position={Position.Left}
+                            message={<span>{shuffle(intro_hi_data)[0].body}</span>}
+                        />
+                    }
+                    {conversations.map(i => (
+                        <ChatBubble
+                            key={i.id}
+                            id={uuidv4()}
+                            position={i.position}
+                            message={i.message.props.children}
+                        />
+                    ))}
+                    {is_loading && <ChatBubble id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
                 </div>
-                <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
-                    <div className="md:col-span-5">
-                        <textarea value={chatbox_text} onChange={({ target }) => {
-                            setChatBoxText(target.value)
-                        }} className="my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder={''} /></div>
-                    <button onClick={() => sendMessage(chatbox_text)} className="md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
+                <div className="mt-6">
+                    <div className='steps--3 mb-2'>                        
+                        {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
+                        {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
+                        {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
+                        {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
+                        {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
+                            e.preventDefault()
+                            setQuestions(true)
+                        }}>View All Questions</a>}
+                    </div>
+                    <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
+                        <div className="md:col-span-5">
+                            <textarea value={chatbox_text} onChange={({ target }) => {
+                                setChatBoxText(target.value)
+                            }} className="steps--4 my-2 p-4 rounded w-full text-gray-600 border border-gray-400" placeholder={''} /></div>
+                        <button onClick={() => sendMessage(chatbox_text)} className="steps--5 md:inline-block sm:hidden mb-2 mt-3 mx-8 text-center inline-flex items-center text-3xl text-green-500 hover:text-green-300 bg-transparent"><FaPaperPlane className="mx-auto" /></button>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </>
     )
 }
