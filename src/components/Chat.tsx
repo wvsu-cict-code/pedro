@@ -229,6 +229,7 @@ export default function Chat(props: any) {
                         ChatMode == IChatMode.English && <ChatBubble
                             key={"intro"}
                             id={uuidv4()}
+                            mode={IChatMode.English}
                             position={Position.Left}
                             message={<span>{shuffle(intro_en_data)[0].body}</span>}
                         />
@@ -237,6 +238,7 @@ export default function Chat(props: any) {
                         ChatMode == IChatMode.Tagalog && <ChatBubble
                             key={"intro"}
                             id={uuidv4()}
+                            mode={IChatMode.Tagalog}
                             position={Position.Left}
                             message={<span>{shuffle(intro_ta_data)[0].body}</span>}
                         />
@@ -245,6 +247,7 @@ export default function Chat(props: any) {
                         ChatMode == IChatMode.Hiligaynon && <ChatBubble
                             key={"intro"}
                             id={uuidv4()}
+                            mode={IChatMode.Hiligaynon}
                             position={Position.Left}
                             message={<span>{shuffle(intro_hi_data)[0].body}</span>}
                         />
@@ -253,22 +256,31 @@ export default function Chat(props: any) {
                         <ChatBubble
                             key={i.id}
                             id={uuidv4()}
+                            mode={IChatMode.English}
                             position={i.position}
                             message={i.message.props.children}
                         />
                     ))}
-                    {is_loading && <ChatBubble id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
+                    {is_loading && <ChatBubble mode={IChatMode.English} id={uuidv4()} key={uuidv4()} position={Position.Left} message={<BouncingLoader />} />}
                 </div>
                 <div className="mt-6">
                     <div className='steps--3 mb-2'>
-                        {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">Back</a>}
+                        {ChatMode != IChatMode.English&&<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/">⇦</a>}                        
                         {ChatMode == IChatMode.English ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/en">English</a>}
                         {ChatMode == IChatMode.Tagalog ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/ta">Tagalog</a>}
                         {ChatMode == IChatMode.Hiligaynon ? null : <a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="/hi">Hiligaynon</a>}
-                        {<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
+                        {ChatMode == IChatMode.English&&<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
                             e.preventDefault()
                             setQuestions(true)
                         }}>View All Questions</a>}
+                        {ChatMode == IChatMode.Tagalog&&<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
+                            e.preventDefault()
+                            setQuestions(true)
+                        }}>Tingnan Lahat Ng Tanong</a>}
+                        {ChatMode == IChatMode.Hiligaynon&&<a className='bg-green-800 text-white rounded hover:bg-green-700 px-4 py-2 text-center mx-2' href="#" onClick={(e) => {
+                            e.preventDefault()
+                            setQuestions(true)
+                        }}>Ipakita Ang Tanan Nga Pamankot</a>}
                     </div>
                     <div className="grid md:grid-cols-6 sm:grid-cols-1 gap-4">
                         <div className="md:col-span-5">

@@ -5,13 +5,20 @@ enum Position {
     Right = 1
 }
 
+enum IChatMode {
+    English = 0,
+    Tagalog = 1,
+    Hiligaynon = 2
+}
+
 interface IProps {
     id: String
     position: Position
-    message?: ReactElement
+    message?: ReactElement,
+    mode: IChatMode
 }
 
-export default function ChatBubble({ position, message }: IProps) {
+export default function ChatBubble({ position, message, mode }: IProps) {
     return (
         <div>
             <div className={`${position ? 'text-right' : 'text-left'} my-2`}>
@@ -29,7 +36,9 @@ export default function ChatBubble({ position, message }: IProps) {
                 }
                 {!position ?
                     <div className="flex">
-                        <img className="w-8 h-8 mx-0 left-0" src="pedro_bubble.png" />
+                        {mode==IChatMode.English&&<img className="w-8 h-8 mx-0 left-0" src="pedro_bubble.png" />}
+                        {mode==IChatMode.Tagalog&&<img className="w-8 h-8 mx-0 left-0" src="pedro_bubble.png" />}
+                        {mode==IChatMode.Hiligaynon&&<img className="w-8 h-8 mx-0 left-0" src="pedro_bubble.png" />}
                         <div className="text-sm opacity-50 mt-4 ml-2">
                             Pedro
                         </div>
